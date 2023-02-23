@@ -1,7 +1,11 @@
 def modifications_dico_valeurs_dynamiques(dico) :
 #####################################################################
-# pass     #pour pas de variables dynamiques 
-####################### A programmer en fonction des capteurs #############
+# pass     #pour ne rien faire 
+####################### Lecture  des capteurs ############################
+    #simulation mesure capteurs 
+    valeur_temperature = 22 
+
+####################### Actualisation des variables dynamiques  #############
     #simulation mesure capteurs 
     valeur_temperature = 22 
     # modification  de la variable temperature  
