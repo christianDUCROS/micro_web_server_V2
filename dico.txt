@@ -1,0 +1,4 @@
+carre_couleur:images/carre_vert.jpg
+couleur_background:#FFDC33
+temperature:19
+date:24-02-2023
