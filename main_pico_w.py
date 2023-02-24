@@ -124,13 +124,11 @@ s = socket.socket()
 s.bind(addr)
 s.listen(5)
 print('listening on', addr) # Listen for connections
-commande = ''
+
 while True:
+    commande = ''
     #Mise à jour donnéees dynamiques : Capteurs....
     dico_valeurs_dynamiques= mdvd.modifications_dico_valeurs_dynamiques(dico_valeurs_dynamiques)
-    #traitement commandes dynamiques
-    print('la commande est :',commande)
-    mtcd.traitement_commandes_dynamiques(commande)
     try:
         cl, addr = s.accept()
         #Allume LED pour indiquer un client connecté 
@@ -166,7 +164,10 @@ while True:
             file_header = 'HTTP/1.1 200 OK\r\nContent-type: text/html\r\n\r\n'
         #lecture du ficher demandé + recherche commande  
         #recherche d'une commande
-        commande = acquisition_commande(request)
+        #commande = acquisition_commande(request)
+        #traitement commandes dynamiques
+        #print('la commande est :',commande)
+        #mtcd.traitement_commandes_dynamiques(commande)
         #pas de commande mais simple appel de page
         if commande=='' :
             #lecture du ficher demandé + insertion data 
